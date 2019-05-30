@@ -50,7 +50,7 @@
   background-color: #fff;
   border: 1px solid #ccc;
   text-align: center;
-  z-index: 99;
+  z-index: 10000;
   display: none;
 }
 #header .header-right ul li .tencent img {
@@ -99,13 +99,36 @@
   margin-left: 100px;
   float: left;
 }
-#header1 .text ul li {
+#header1 .text .shou {
   float: left;
-  margin-right: 35px;
 }
-#header1 .text ul li a {
+#header1 .text .shou a {
+  padding-right: 35px;
+  display: block;
   font-size: 14px;
   color: #333;
+}
+#header1 .text .shou a:hover {
+  color: red;
+}
+#header1 .text ul {
+  overflow: hidden;
+}
+#header1 .text ul:hover .erbar {
+  height: 206px;
+  transition: all 1s;
+}
+#header1 .text ul li {
+  float: left;
+}
+#header1 .text ul li a {
+  padding-right: 35px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+#header1 .text ul li a:hover {
+  color: red;
 }
 #header1 .text1 {
   height: 41px;
@@ -155,6 +178,39 @@
   padding: 0 10px;
   font-size: 14px;
   color: #555;
+}
+#header1 .erbar {
+  position: absolute;
+  top: 95px;
+  left: 0px;
+  width: 100%;
+  height: 0px;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 10000;
+}
+#header1 .erbar ul li {
+  margin-top: 40px;
+  margin-right: 20px;
+  float: left;
+  text-align: center;
+  font-size: 10px;
+}
+#header1 .erbar ul li:nth-of-type(1) {
+  margin-left: 120px;
+}
+#header1 .erbar ul li a {
+  display: block;
+}
+#header1 .erbar ul li a .wen {
+  color: #000;
+}
+#header1 .erbar ul li a .jia {
+  color: red;
+}
+#header1 .erbar ul li a img {
+  width: 150px;
+  margin: 0 auto;
 }
 #banner {
   width: 100%;
