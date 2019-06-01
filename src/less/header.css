@@ -1,0 +1,226 @@
+@charset "UTF-8";
+#header {
+  height: 40px;
+  background-color: #666;
+}
+#header .header-left {
+  float: left;
+  line-height: 40px;
+}
+#header .header-left ul li {
+  height: 40px;
+  float: left;
+  margin: 0 20px;
+}
+#header .header-left ul li a {
+  color: #cccccc;
+  font-size: 11px;
+}
+#header .header-left ul li a:hover {
+  color: #fff;
+}
+#header .header-right {
+  float: right;
+  line-height: 40px;
+}
+#header .header-right ul li {
+  height: 40px;
+  float: left;
+  position: relative;
+}
+#header .header-right ul li a {
+  color: #cccccc;
+  font-size: 11px;
+}
+#header .header-right ul li a:hover {
+  color: #fff;
+}
+#header .header-right ul li span {
+  color: #cccccc;
+  font-size: 11px;
+}
+#header .header-right ul li:nth-last-child(1) {
+  margin-right: 20px;
+}
+#header .header-right ul li .tencent {
+  position: absolute;
+  left: -30px;
+  width: 180px;
+  height: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  text-align: center;
+  z-index: 10000;
+  display: none;
+}
+#header .header-right ul li .tencent img {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#header .header-right ul li .tencent p {
+  font-size: 10px;
+  line-height: 160%;
+}
+#header .header-right ul li:nth-of-type(1):hover .tencent {
+  display: block;
+}
+#header .header-right ul i {
+  height: 13px;
+  border-right: 1px solid #979797;
+  margin-left: 15px;
+  margin-right: 15px;
+  float: left;
+  margin-top: 16px;
+}
+#header1 {
+  height: 60px;
+  width: 100%;
+  background-color: #fff;
+}
+#header1 .logo {
+  float: left;
+  margin-top: 8px;
+  height: 45px;
+  width: 75px;
+  background-color: red;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 15px 0 0 0;
+}
+#header1 .logo a {
+  font-family: iconfont-tcl;
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+}
+#header1 .text {
+  height: 60px;
+  line-height: 55px;
+  margin-left: 100px;
+  float: left;
+}
+#header1 .text .shou {
+  float: left;
+}
+#header1 .text .shou a {
+  padding-right: 35px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+#header1 .text .shou a:hover {
+  color: red;
+}
+#header1 .text ul {
+  overflow: hidden;
+}
+#header1 .text ul:hover .erbar {
+  height: 206px;
+  transition: all 1s;
+}
+#header1 .text ul li {
+  float: left;
+}
+#header1 .text ul li a {
+  padding-right: 35px;
+  display: block;
+  font-size: 14px;
+  color: #333;
+}
+#header1 .text ul li a:hover {
+  color: red;
+}
+#header1 .text1 {
+  height: 41px;
+  float: right;
+}
+#header1 .text1 .menu {
+  position: relative;
+}
+#header1 .text1 .menu input {
+  margin-left: 10px;
+  margin-top: 15px;
+  padding-left: 15px;
+  height: 30px;
+  width: 200px;
+}
+#header1 .text1 .menu span {
+  width: 28px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: 9px;
+  top: -2px;
+  cursor: pointer;
+}
+#header1 .text1 .menu span img {
+  position: absolute;
+  top: 4px;
+  left: 5px;
+}
+#header1 .text1 .font {
+  border-left: 1px solid #e3e3e3;
+  width: 1px;
+  height: 20px;
+  float: left;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+#header1 .text1 ul {
+  margin-left: 10px;
+  margin-top: 18px;
+  float: left;
+}
+#header1 .text1 ul li {
+  float: left;
+}
+#header1 .text1 ul li a {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #555;
+}
+#header1 .erbar {
+  position: absolute;
+  top: 95px;
+  left: 0px;
+  width: 100%;
+  height: 0px;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 10000;
+}
+#header1 .erbar ul li {
+  margin-top: 20px;
+  margin-right: 20px;
+  width: 250px;
+  float: left;
+  text-align: center;
+}
+#header1 .erbar ul li:nth-of-type(1) {
+  margin-left: 120px;
+}
+#header1 .erbar ul li a {
+  display: block;
+}
+#header1 .erbar ul li a .wen {
+  margin-top: 10px;
+  width: 250px;
+  font-size: 10px;
+  height: 30px;
+  line-height: 30px;
+  color: #000;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#header1 .erbar ul li a .jia {
+  width: 250px;
+  height: 30px;
+  line-height: 30px;
+  color: red;
+}
+#header1 .erbar ul li a img {
+  width: 150px;
+  height: 100px;
+  margin-left: 45px;
+}

@@ -1,0 +1,112 @@
+@charset "UTF-8";
+#main {
+  height: 750px;
+  margin-top: 50px;
+  overflow: hidden;
+  background-color: #fff;
+}
+#main .img {
+  position: relative;
+  margin-top: 100px;
+  margin-left: 200px;
+  float: left;
+}
+#main .img .big {
+  overflow: hidden;
+  display: none;
+  border: 1px solid #fff;
+  position: absolute;
+  left: 300px;
+  top: 0;
+  background-color: #fff;
+}
+#main .img .big .bigpic {
+  position: relative;
+  width: 500px;
+}
+#main .img .small {
+  width: 300px;
+  height: 300px;
+  border: 1px solid #fff;
+  box-shadow: 0 0 3px gray;
+  position: relative;
+}
+#main .img .small .smallpic {
+  background-color: #fff;
+  width: 300px;
+}
+#main .img .small .movebox {
+  z-index: 10 !important;
+  background-color: rgba(255, 255, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+#main .text {
+  height: 400px;
+  margin-top: 100px;
+  margin-left: 60px;
+  width: 500px;
+  float: left;
+}
+#main .text h1 {
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+#main .text p {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+#main .text h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+#main .text h6 {
+  color: red;
+  margin-bottom: 10px;
+}
+#main .text .span1 {
+  color: red;
+  font-size: 25px;
+}
+#main .text .span2 {
+  font-weight: 800;
+}
+#main .text input {
+  height: 20px;
+  width: 60px;
+}
+#main .text h3 {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  line-height: 50px;
+  text-align: center;
+  background-color: red;
+  color: #fff;
+  font-weight: bolder;
+}
+#main .text ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+#main .text ul li {
+  color: #fff;
+  border-radius: 10px;
+  background-color: red;
+  cursor: pointer;
+  margin-right: 10px;
+  display: inline-block;
+  margin-top: 0!important;
+}
+.show {
+  display: block !important;
+}
+.hide {
+  display: none;
+}

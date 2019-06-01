@@ -15,15 +15,18 @@ dl,
 dt,
 dd,
 img {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
+
 li {
-  list-style: none;
+    list-style: none;
 }
+
 html {
-  width: 100%;
+    width: 100%;
 }
+
 b,
 strong,
 i,
@@ -34,24 +37,29 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal;
-  font-style: normal;
+    font-weight: normal;
+    font-style: normal;
 }
+
 img {
-  display: block;
+    display: block;
 }
+
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
 .clean::after {
-  content: "";
-  display: block;
-  clear: both;
-  height: 0;
-  overflow: hidden;
+    content: "";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
 }
+
 body {
-  font-family: "Microsoft YaHei", "PingFang SC";
-  color: #666;
-  background-color: #f2f2f2!important;
+    font-family: "Microsoft YaHei", "PingFang SC";
+    color: #666;
+    background-color: #f2f2f2!important;
+    overflow-x: hidden;
 }
