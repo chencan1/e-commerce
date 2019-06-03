@@ -12,14 +12,18 @@
     <script src="../js/cookie.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../js/lunbao.js"></script>
-    <script src="../js/headerbanner.js"></script>
+    <!--多表的  -->
+    <!-- <script src="../js/headerbanner.js"></script>-->
+    <script src="../js/header.js"></script>
+
     <script>
         $(function() {
             var usename = cookie.get("username");
             var f = cookie.get("isLogin");
+            console.log($('#deng'));
             if (f) {
                 $('#deng').html("欢迎您：" + usename);
-                $('#deng').attr('href', "#")
+                $('#deng').attr('href', "javascript:;")
                 var e = ` <a href="index.html" id="tui">退出</a>`
                 $('#deng1').html(function(i, old) {
                     return old + e;

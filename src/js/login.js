@@ -13,7 +13,7 @@ $(function() {
                     cookie.set('isLogin', 'true', 1);
                     cookie.set('username', $('#username').val(), 1);
                     alert('登陆成功');
-                    location.href = "index.html";
+                    history.back(-1);
                 } else if (data == "登陆失败") {
                     alert('登陆失败');
                     location.href = "login.html";

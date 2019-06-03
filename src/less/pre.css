@@ -89,6 +89,7 @@
   background-color: red;
   color: #fff;
   font-weight: bolder;
+  cursor: pointer;
 }
 #main .text ul {
   margin-top: 20px;

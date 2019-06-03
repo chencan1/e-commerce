@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../less/reset.css">
+    <link rel="stylesheet" href="../less/header.css">
+    <link rel="stylesheet" href="../less/guo.css">
+    <script src="../js/cookie.js"></script>
+    <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/headerbanner.js"></script>
+    <script>
+        $(function() {
+            var usename = cookie.get("username");
+            var f = cookie.get("isLogin");
+            if (f) {
+                $('#deng').html("欢迎您：" + usename);
+                $('#deng').attr('href', "javascript:;")
+                var e = ` <a href="index.html" id="tui">退出</a>`
+                $('#deng1').html(function(i, old) {
+                    return old + e;
+                })
+            }
+            $('#deng1').on('click', '#tui', function() {
+                cookie.remove('isLogin');
+                $('#deng').attr('href', "login.html")
+            })
+            $('#main ol').on('click', 'li .del', function() {
+                var a = cookie.get('shop');
+                var b = JSON.parse(a);
+                b.splice($(this).parent().index(), 1)
+                cookie.set('shop', JSON.stringify(b));
+                location.reload();
+            })
+            var a = cookie.get('shop');
+            var a = JSON.parse(a);
+            a.forEach(function(elm, i) {
+                if (elm.name == 'tv') {
+                    $.ajax({
+                        type: "get",
+                        url: "../../php/miandian1.php",
+                        data: {
+                            'id': elm.id
+                        },
+                        dataType: "json",
+                        success: function(response) {
+                            var str = `<li>
+                                    <div class="c-box">
+                                    <input type="checkbox" id="">
+                                    </div>
+                                    <div class="p-img">
+                                    <img src="${response.img}" alt="${response.title}">
+                                    </div>
+                                    <div class="p-title">
+                                    ${response.title}
+                                    </div>
+                                    <div class="p-num">
+                                    数量：${elm.num}
+                                    </div>
+                                    <div class="p-price">
+                                    单价:${response.jiange}
+                                    </div>
+                                    <div class="p-sum">
+                                    总价:${(response.jiange*elm.num).toFixed(2)}
+                                    </div>
+                                    <div class="del">
+                                    <input type="button" value="删除">
+                                </div>
+                                 </li>`
+                            $('#main ol').append(str);
+                        }
+                    });
+                }
+                if (elm.name == 'kong') {
+                    $.ajax({
+                        type: "get",
+                        url: "../../php/miankong1.php",
+                        data: {
+                            'id': elm.id
+                        },
+                        dataType: "json",
+                        success: function(response) {
+                            var str = `<li>
+                                    <div class="c-box">
+                                    <input type="checkbox" id="">
+                                    </div>
+                                    <div class="p-img">
+                                    <img src="${response.img}" alt="${response.title}">
+                                    </div>
+                                    <div class="p-title">
+                                    ${response.title}
+                                    </div>
+                                    <div class="p-num">
+                                    数量：${elm.num}
+                                    </div>
+                                    <div class="p-price">
+                                    单价:${response.jiange}
+                                    </div>
+                                    <div class="p-sum">
+                                    总价:${(response.jiange*elm.num).toFixed(2)}
+                                    </div>
+                                    <div class="del">
+                                    <input type="button" value="删除">
+                                </div>
+                                 </li>`
+                            $('#main ol').append(str);
+                        }
+                    });
+                }
+
+
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="header-left">
+            <ul>
+                <li>
+                    <a href="">TCL新闻</a>
+                </li>
+                <li>
+                    <a href="">企业采购</a>
+                </li>
+                <li>
+                    <a href="">经销商之家</a>
+                </li>
+                <li>
+                    <a href="">用户体验中心</a>
+                </li>
+                <li>
+                    <a href="">铁粉社区</a>
+                </li>
+                <li>
+                    <a href="">人才招聘</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <ul>
+                <li>
+                    <a href="">微信商城</a>
+                    <div class="tencent">
+                        <img src="../img/wechat.jpg" alt="">
+                        <p>
+                            "关注公众号"
+                            <br> "一键下单购买"
+                        </p>
+                    </div>
+                </li>
+                <i></i>
+                <li>
+                    <a href="">购物车</a>
+                    <span>(0)</span>
+                </li>
+                <i></i>
+                <li>
+                    <a href="">注册</a>
+                </li>
+                <i></i>
+                <li id="deng1">
+                    <a href="login.html" id="deng">登录</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="header1">
+        <div class="logo">
+            <a href="#">TCT</a>
+        </div>
+        <div class="text">
+            <div class="shou">
+                <a href="">首页</a>
+            </div>
+            <ul>
+                <li>
+                    <a href="">电视</a>
+                </li>
+                <li>
+                    <a href="">空调</a>
+                </li>
+                <li>
+                    <a href="">冰箱</a>
+                </li>
+                <li>
+                    <a href="">洗衣机</a>
+                </li>
+                <li>
+                    <a href="">健康电器</a>
+                </li>
+                <li>
+                    <a href="">智能硬件</a>
+                </li>
+                <div class="erbar">
+                    <ul>
+                    </ul>
+                </div>
+            </ul>
+        </div>
+        <div class="text1">
+            <font class="font"></font>
+            <ul>
+                <li>
+                    <a href="">服务</a>
+                </li>
+                <li>
+                    <a href="">视频教程</a>
+                </li>
+                <li>
+                    <a href="">XESS门店</a>
+                </li>
+                <li>
+                    <a href="">积分兑换</a>
+                </li>
+            </ul>
+            <span class="menu">
+                         <input type="text" id="shou" placeholder="领券立减100元">
+                        <span>
+                           <img src="../img/top_01.jpg" alt="">
+                        </span>
+            </span>
+        </div>
+    </div>
+    <div id="main">
+        <ol type="1">
+        </ol>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+#main {
+  width: 800px;
+  height: 600px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+#main li {
+  list-style: decimal;
+  overflow: hidden;
+  background-color: #fff;
+}
+#main li div {
+  margin-right: 20px;
+  float: left;
+}
+#main .c-box {
+  margin-top: 20px;
+}
+#main .p-title {
+  margin-top: 20px;
+}
+#main .p-num {
+  margin-top: 20px;
+}
+#main .p-price {
+  margin-top: 20px;
+}
+#main .p-sum {
+  margin-top: 20px;
+}
+#main .del {
+  margin-top: 20px;
+}
+#main .p-img img {
+  width: 60px;
+}
