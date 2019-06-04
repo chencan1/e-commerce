@@ -245,3 +245,48 @@
   box-shadow: 0px 0px 2px gray;
   top: -5px;
 }
+#bootm {
+  position: relative;
+  height: 200px;
+  background-color: #f0f0f0;
+}
+#bootm .wei {
+  position: absolute;
+  right: 120px;
+  top: 20px;
+}
+#bootm ul {
+  margin-left: 20px;
+  overflow: hidden;
+}
+#bootm ul li {
+  float: left;
+  margin-right: 20px;
+}
+#bootm ul li a {
+  color: #666;
+  font-size: 14px;
+}
+#bootm p {
+  margin-top: 15px;
+  margin-left: 20px;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+#bootm h6 {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+#bootm .img {
+  overflow: hidden;
+  width: 250px;
+  margin: 0 auto;
+}
+#bootm .img img {
+  margin-right: 10px;
+  float: left;
+}
+#bootm .img .img1 {
+  margin-top: 1px;
+}
